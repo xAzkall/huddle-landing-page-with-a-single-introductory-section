@@ -1,0 +1,158 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6.4rem;
+  background: url(images/bg-desktop.svg), var(--violet);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .logo {
+  position: absolute;
+  top: 6.4rem;
+  left: 6.4rem;
+}
+.container .img-box {
+  width: 240rem;
+  padding-top: 6.4rem;
+}
+.container .img-box img {
+  width: 100%;
+}
+.container .hero-content {
+  padding-left: 5.2rem;
+}
+.container .hero-content .heading1 {
+  font-size: 4.8rem;
+  margin-bottom: 3.2rem;
+}
+.container .hero-content .hero-text {
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+}
+.container .hero-content .btn-register {
+  padding: 1.6rem 6.4rem;
+  background-color: var(--white);
+  color: var(--violet);
+  font-size: 2rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.container .hero-content .btn-register:hover {
+  cursor: pointer;
+  background-color: var(--soft-magenta);
+  color: var(--white);
+}
+.container .social {
+  display: flex;
+  gap: 1.2rem;
+  position: absolute;
+  bottom: 3.2rem;
+  right: 4.8rem;
+}
+.container .social .social-link:link,
+.container .social .social-link:visited {
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .social .social-link:link i,
+.container .social .social-link:visited i {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.container .social .social-link:hover {
+  border: 1px solid var(--soft-magenta);
+  cursor: pointer;
+}
+.container .social .social-link:hover i {
+  color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 35%;
+  }
+  .container {
+    flex-direction: column;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 4.8rem;
+  }
+  .container .logo {
+    width: 24rem;
+  }
+  .container .img-box {
+    width: 100%;
+  }
+  .container .hero-content {
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .container .hero-content .hero-text {
+    font-size: 3.2rem;
+  }
+  .container .hero-content .btn-register {
+    padding: 2.8rem 14rem;
+    font-size: 2.4rem;
+  }
+  .container .social {
+    bottom: 6.4rem;
+    right: 50%;
+    transform: translateX(50%);
+    gap: 2.4rem;
+  }
+  .container .social .social-link:link,
+  .container .social .social-link:visited {
+    width: 6rem;
+    height: 6rem;
+  }
+  .container .social .social-link:link i,
+  .container .social .social-link:visited i {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
